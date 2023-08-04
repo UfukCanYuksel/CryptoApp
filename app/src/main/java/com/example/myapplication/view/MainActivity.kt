@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.Listener {
     private lateinit var binding: ActivityMainBinding
 
     private var compositeDisposable: CompositeDisposable? = null
+
     private var recyclerViewAdapter : RecyclerViewAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,8 +39,7 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.Listener {
         compositeDisposable = CompositeDisposable()
         val layoutManager :RecyclerView.LayoutManager = LinearLayoutManager(this)
         binding.recyclerView.layoutManager = layoutManager
-
-
+        println("deneme")
         loadData()
     }
 
